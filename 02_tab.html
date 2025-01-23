@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .header{
+            width: 1200px;
+            height: 100px;
+            background-color: lightgray;
+            margin: auto;
+        }
+        .slide{
+            width: 1200px;
+            height: 300px;
+            background-color: lightcoral;
+            margin: auto;
+        }
+        
+        .content{
+            width: 1200px;
+            height: 200px;
+            background-color: lightgoldenrodyellow;
+            margin: auto;
+            display: flex;
+        }
+        .footer{
+            width: 1200px;
+            height: 100px;
+            background-color: lightgreen;
+            margin: auto;
+        }
+        .content .bbs{
+            width: 400px;
+            height: 200px;
+            background-color: darkblue;
+            position: relative;
+        }
+    
+        .content .banner{
+            width: 400px;
+            height: 200px;
+            background-color: darkgreen;
+        }
+        .content .go{
+            width: 400px;
+            height: 200px;
+            background-color: darkgoldenrod;
+        }
+        .bbs .tab{
+            display: flex;
+        }
+        .tab h3{
+            width: 90px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            background-color: lightgray;
+            cursor: pointer;
+        }
+        .tab .ov{
+            background-color: lightskyblue;
+        }
+        .bbs #subject{
+            position: absolute;
+            width: 400px;
+            height: 160px;
+            z-index: 1;
+            top: 40px;
+            left: 0;
+            background-color: darkcyan;
+        }
+        .bbs #pic{
+            position: absolute;
+            width: 400px;
+            height: 160px;
+            z-index: 1;
+            top: 40px;
+            left: 0;
+            background-color: darkmagenta;
+            display: none;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="header"></div>
+    <div class="slide"></div>
+    <div class="content">
+        <div class="bbs">
+            <div class="tab">
+            <h3 class="ov" id="notice">공지사항</h3>
+            <h3 id="gallery">갤러리</h3>
+            </div>
+            <div id="subject"></div>
+            <div id="pic"></div>
+            
+
+        </div>
+        <div class="banner">배너</div>
+        <div class="go">바로가기</div>
+    </div>
+    <div class="footer">
+        <div class="logo"></div>
+        <div class="copy"></div>
+        <div class="wid"></div>
+        <script>
+            document.querySelector('#notice').addEventListener('click',function(){
+                document.querySelector('#notice').classList.add('ov');  
+                document.querySelector('#gallery').classList.remove('ov');  
+            });
+            document.querySelector('#gallery').addEventListener('click',function(){
+                document.querySelector('#notice').classList.remove('ov');  
+                document.querySelector('#gallery').classList.add('ov'); 
+            });
+        </script>
+    </div>
+</body>
+</html>
