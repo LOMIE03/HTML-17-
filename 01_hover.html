@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .header{
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+            position: relative;
+            margin-left: 100px;
+            margin-top: 100px;
+
+        }
+        .header p{
+            position: absolute;
+            left: 0;
+            top: 0;
+            transition: all .5s;
+           
+        }
+        .header:hover p{
+            left: 200px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <p>Lorem, ipsum.</p>
+    </div>
+</body>
+</html>
